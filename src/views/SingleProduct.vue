@@ -162,8 +162,7 @@ computed: {
     },
 },
 methods: {
-    ...mapActions("product", ["fetchSingleProduct"]),
-    ...mapActions("product",["fetchProduct"])
+    ...mapActions("product", ["fetchSingleProduct","fetchProduct"]),
     
 },
 beforeMount(){

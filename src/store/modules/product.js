@@ -46,6 +46,9 @@ const product = {
     SET_SINGLE_PRODUCT(state, product) {
         state.singleProduct = product;
       },
+    // SET_FilTER_PRODUCT(state, product) {
+    //   state.filterProduct = product;
+    // }
   },
 };
 
