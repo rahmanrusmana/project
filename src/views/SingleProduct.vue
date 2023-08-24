@@ -7,23 +7,32 @@
                         <div class="lg:flex lg:items-start">
                             <div class="lg:order-2 lg:ml-5">
                                 <div class="max-w-xl overflow-hidden rounded-lg">
-                                    <img class="h-full w-full max-w-full object-cover" src="https://www.maternaldisaster.com/wp-content/uploads/2023/07/kott-1.jpg" alt="" />
+                                    <a class="relative flex h-full overflow-hidden rounded-lg" href="#">
+                                        <img class="object-cover" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e0b55a0c-0619-4a43-8790-1d97318ad30b/alphafly-2-road-racing-shoes-DcWrKF.png" alt="product image" />
+                                        <div class="flex flex-row mt-5 absolute top-0 left-0 m-5 rounded-full bg-white px-2 text-center text-sm ">
+                                            <div class="">
+                                                <svg height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2.69 -2.69 59.25 59.25" xml:space="preserve" fill="#000000" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)" stroke="#000000" stroke-width="0.00053867"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.861872"></g><g id="SVGRepo_iconCarrier"> <polygon style="fill:#000000;" points="26.934,1.318 35.256,18.182 53.867,20.887 40.4,34.013 43.579,52.549 26.934,43.798 10.288,52.549 13.467,34.013 0,20.887 18.611,18.182 "></polygon> </g></svg>
+                                            </div>
+                                            <div class="font-medium text-black font-medium ml-2">Highly Rated</div>
+                                        </div>
+                                    </a>
+
                                 </div>
                             </div>
   
-                            <div class="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0">
+                            <div class="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0 ml-5">
                                 <div class="flex flex-row items-start lg:flex-col">
                                     <button type="button"
-                                        class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-900 text-center">
-                                        <img class="h-full w-full object-cover" src="https://www.maternaldisaster.com/wp-content/uploads/2023/07/kott-1.jpg" alt="" />
+                                        class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
+                                        <img class="h-full w-full object-cover" src="https://static.nike.com/a/images/t_default/fb9c1fae-d0e0-4ca2-8210-2135df98bba2/alphafly-2-road-racing-shoes-DcWrKF.png" alt="" />
                                     </button>
                                     <button type="button"
                                         class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                                        <img class="h-full w-full object-cover" src="https://www.maternaldisaster.com/wp-content/uploads/2023/07/kott-1.jpg" alt="" />
+                                        <img class="h-full w-full object-cover" src="https://static.nike.com/a/images/t_default/0a88b9af-877f-453c-ae4f-4f441a7026de/alphafly-2-road-racing-shoes-DcWrKF.png" alt="" />
                                     </button>
                                     <button type="button"
                                         class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                                        <img class="h-full w-full object-cover" src="https://www.maternaldisaster.com/wp-content/uploads/2023/07/kott-1.jpg" alt="" />
+                                        <img class="h-full w-full object-cover" src="https://static.nike.com/a/images/t_default/f214553b-c657-42c9-914a-4513f905cbeb/alphafly-2-road-racing-shoes-DcWrKF.png" alt="" />
                                     </button>
                                 </div>
                             </div>
@@ -31,70 +40,58 @@
                     </div>
   
                     <div class="lg:col-span-2 lg:row-span-2 lg:row-end-2">
-                        <h1 class="sm: text-2xl font-bold text-gray-900 sm:text-3xl"> {{ product.name }}</h1>
-                        <h1 class="sm: text-base font-bold text-gray-900 sm:text-base"> {{ product.slug }}</h1>
+                        <h1 class="sm: text-2xl font-semibold text-gray-900 sm:text-3xl"> {{ product.name }}</h1>
+                        <h1 class="sm: text-base font-bold text-gray-900 sm:text-basefont-bold text-gray-900 sm:text-base"> {{ product.slug }}</h1>
   
-                        <div class="mt-5 flex items-center">
-                            <div class="flex items-center">
-                                <svg class="block h-4 w-4 align-middle text-yellow-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        class=""></path>
-                                </svg>
-                                <svg class="block h-4 w-4 align-middle text-yellow-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        class=""></path>
-                                </svg>
-                                <svg class="block h-4 w-4 align-middle text-yellow-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        class=""></path>
-                                </svg>
-                                <svg class="block h-4 w-4 align-middle text-yellow-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        class=""></path>
-                                </svg>
-                                <svg class="block h-4 w-4 align-middle text-yellow-500" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20" fill="currentColor">
-                                    <path
-                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                        class=""></path>
-                                </svg>
-                            </div>
-                            <!-- <p class="ml-2 text-sm font-medium text-gray-500">{{ product.rating.rate }}</p> -->
-                        </div>
-  
-                        <h2 class="mt-8 text-base">Rp {{ product.base_price }}</h2>
-                        <div class="mt-3 flex select-none flex-wrap items-center gap-1">
-                            <label class="">
-                                <input type="radio" name="type" value="Powder" class="peer sr-only" checked />
-                                <!-- <p
-                                    class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                                    {{ product.category }}</p> -->
-                            </label>
-                        </div>
-  
-                        <div
-                            class="mt-10 flex flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
-                            
-                          <a href="/cart">
-                            <button type="button"
-                                class="inline-flex items-center justify-center rounded-md border-2 border-transparent bg-gray-900 bg-none px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                                </svg>
-                                Add to cart
+                        <h2 class="mt-5 text-base font-bold text-gray-900 sm:text-base">Rp {{ product.base_price }}</h2>
+                        <div class="mt-10">
+                            <button type="button" class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded mr-2 border-transparent border-1">
+                                <img class="h-full w-full object-cover" src="https://static.nike.com/a/images/t_default/aef85fd7-18ea-457e-9278-babc7d8a0271/alphafly-2-road-racing-shoes-DcWrKF.png" alt="" />
                             </button>
-                          </a>
+
+                            <button type="button" class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-800">
+                                <img class="h-full w-full object-cover" src="https://static.nike.com/a/images/t_default/fb9c1fae-d0e0-4ca2-8210-2135df98bba2/alphafly-2-road-racing-shoes-DcWrKF.png" alt="" />
+                            </button>
                         </div>
+ 
+                        <div class="flex flex-row mt-5">
+                            <div class="basis-1/2 sm: text-base font-semibold sm:text-basefont-medium sm:text-base">Select Size</div>
+                            <div class="basis-1/2 text-gray-500 text-end sm: text-base font-semibold sm:text-basefont-medium sm:text-base">Size Guide</div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 text-center mt-2">
+                            <div class="bg-gray-300 text-gray-600 font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">EU 36</div>
+                            <div class="bg-gray-300 text-gray-600 font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">EU 36.5</div>
+                            <div class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">EU 37.5</div>
+                            <div class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">EU 38</div>
+                            <div class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">EU 38.5</div>
+                            <div class="bg-gray-300 text-gray-600 font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">EU 39</div>
+                            <div class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">EU 40</div>
+                            <div class="bg-gray-300 text-gray-600 font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">EU 41</div>
+                            <div class="bg-gray-300 text-gray-600 font-bold py-2 px-4 rounded opacity-50 cursor-not-allowed">EU 41.5</div>
+                        </div>
+        
+                        <div class="mt-10 flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
+                            <div v-if="token">
+                                <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-gray-900 bg-none w-full px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                    </svg>
+                                    Add to cart
+                                </button>
+                            </div>
+
+                            <div v-else>
+                            <router-link to="/login">
+                                <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-gray-900 bg-none w-full px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                    </svg>
+                                    Add to cart
+                                </button>
+                            </router-link>
+                        </div>
+                        </div>
+                        <div class="text-lg font-medium text-gray-900 dark:text-white mt-5">Once you take a few strides in the Nike Alphafly 2, you'll never look at your favourite pair of old racing shoes the same way again. These rocket ships are made to help shave precious time off your personal records without surrendering the foundation you need to go the full distance. A thick, lightweight support system marries the 2 worlds of comfort and speed in holy running matrimony. Enjoy the greatest energy return of all our racing shoes while you chase your personal bests and leave the competition in the dust.</div>
   
                         <ul class="mt-8 space-y-2">
                             <li class="flex items-center text-left text-sm font-medium text-gray-600">
@@ -139,7 +136,16 @@
                         </div>
   
                         <div class="mt-8 flow-root sm:mt-12">
-                            <!-- <p class="mt-4">{{ product.description }}</p> -->
+                            <h1 class="text-3xl font-bold">Race Ahead</h1>
+                            <p class="mt-4">The lightweight carbon-fibre plate combined with a ZoomX foam midsole is designed for speed.</p>
+
+                            <h1 class="mt-8 text-3xl font-bold">Support For Long Distance</h1>
+                            <p class="mt-4">Designed for long-distance road racing, the Nike Alphafly 2 has been updated with a slightly wider heel for stability when rounding corners in pursuit of your next finishing line.</p>
+
+                            <h1 class="mt-8 text-3xl font-bold">Speed Sensation</h1>
+                            <p class="mt-4">Forefront Zoom Air pods are optimised to absorb more impact ensuring better heel-to-toe transitions.</p>
+                            <br>
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -155,6 +161,12 @@
 import { mapGetters, mapActions} from "vuex";
 
 export default {
+    data() {
+        return {
+            token: null
+        }
+    },
+
 computed: {
     ...mapGetters("product", ["getProductBySlug"]),
     product() {
@@ -163,14 +175,19 @@ computed: {
 },
 methods: {
     ...mapActions("product", ["fetchSingleProduct","fetchProduct"]),
+    ...mapActions("cart", ["fetchCart"])
     
 },
 beforeMount(){
   this.fetchProduct()
+  this.fetchCart()
 },
 mounted(){
   const productSlug = this.$route.params.slug;
-  this.fetchSingleProduct(productSlug)
+  this.fetchSingleProduct(productSlug);
+
+  const cektoken = localStorage.getItem('token');
+  this.token = cektoken
 }
 
 

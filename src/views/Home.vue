@@ -20,7 +20,7 @@
 
     <div class="">
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Easy Everyday Essentials</h2>
+        <h2 class="text-2xl font-bold tracking-tight text-gray-900">RUNNING SHOES Men's & Women's</h2>
   
         <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           <div v-for="product in products" :key="product.id" class="group relative">
@@ -35,9 +35,10 @@
                     {{ product.name }}
                   </a>
                 </h3>
+                <p class="mt-1 text-sm text-gray-500">{{ product.imageAlt }}</p>
                 <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
+                <p class="text-base font-medium text-bold">{{ product.price }}</p>
               </div>
-              <p class="text-sm font-medium text-gray-900">{{ product.price }}</p>
             </div>
           </div>
         </div>
@@ -51,39 +52,39 @@
 const products = [
     {
       id: 1,
-      name: 'KOTT',
+      name: 'Nike Alphafly 2',
       href: '#',
-      imageSrc: 'https://www.maternaldisaster.com/wp-content/uploads/2023/07/kott-1.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: 'Rp 199.000',
-      color: 'SKELETAL HOUS',
+      imageSrc: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fb9c1fae-d0e0-4ca2-8210-2135df98bba2/alphafly-2-road-racing-shoes-DcWrKF.png',
+      imageAlt: "Women's Road Racing Shoes",
+      price: 'Rp 4,499,000',
+      color: '1 Colour',
     },
     {
       id: 2,
-      name: 'FINESTRA',
+      name: 'Nike Vaporfly 3',
       href: '#',
-      imageSrc: 'https://www.maternaldisaster.com/wp-content/uploads/2023/07/finestra-1-1200x1200.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: 'Rp 429.000',
-      color: 'SKELETAL HOUSE',
+      imageSrc: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6a588034-2960-4631-b425-c94c665175d5/vaporfly-3-road-racing-shoes-xsDgvM.png',
+      imageAlt: "Men's Road Racing Shoes",
+      price: 'Rp 3,399,000',
+      color: '3 Colour',
     },
     {
       id: 3,
-      name: 'LATH',
+      name: 'Nike Zoom Fly 5',
       href: '#',
-      imageSrc: 'https://www.maternaldisaster.com/wp-content/uploads/2023/08/lath-1-1200x1200.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: 'Rp 189.000',
-      color: 'SKELETAL HOUSE',
+      imageSrc: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/81e00284-dc73-4e94-a4b7-06f85fa90b4c/zoom-fly-5-road-running-shoes-lkx7Zp.png',
+      imageAlt: "Men's Road Racing Shoes",
+      price: 'Rp 2,489,000',
+      color: '4 Colour',
     },
     {
       id: 4,
-      name: 'BRAKEN',
+      name: 'Nike Free RN NN',
       href: '#',
-      imageSrc: 'https://www.maternaldisaster.com/wp-content/uploads/2022/04/braken-1-1200x1200.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: 'RP 389.000',
-      color: 'TRAGICA MYSTERIA',
+      imageSrc: 'https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/3e7202f0-9737-4398-872d-a7d3f526d9d0/free-rn-nn-road-running-shoes-jt4vDT.png',
+      imageAlt: "Women's Road Racing Shoes",
+      price: 'RP 1,549,000',
+      color: '3 Colour',
     },
     
     // More products...

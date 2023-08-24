@@ -5,6 +5,7 @@ import brand from "./modules/brand";
 import kategori from "./modules/kategori"
 import product from "./modules/product";
 import user from "./modules/user"
+import cart from "./modules/cart"
 
 const store = createStore({
     state: {
