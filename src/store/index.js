@@ -17,7 +17,8 @@ const store = createStore({
         brand,
         kategori,
         product,
-        user
+        user,
+        cart
     }
 })
 export default store;

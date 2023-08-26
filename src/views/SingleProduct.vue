@@ -72,7 +72,7 @@
         
                         <div class="mt-10 flex-col items-center justify-between space-y-4 border-t border-b py-4 sm:flex-row sm:space-y-0">
                             <div v-if="token">
-                                <button type="button" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-gray-900 bg-none w-full px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-600">
+                                <button @click="addToCart(product.id)" type="button" class="inline-flex items-center justify-center rounded-full border-2 border-transparent bg-gray-900 bg-none w-full px-12 py-3 text-center text-base font-bold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 mr-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                                     </svg>
@@ -163,7 +163,8 @@ import { mapGetters, mapActions} from "vuex";
 export default {
     data() {
         return {
-            token: null
+            token: null,
+            cek: 1
         }
     },
 
@@ -171,19 +172,46 @@ computed: {
     ...mapGetters("product", ["getProductBySlug"]),
     product() {
         return this.getProductBySlug(this.$route.params.slug);
-    },
+    }
 },
 methods: {
     ...mapActions("product", ["fetchSingleProduct","fetchProduct"]),
-    ...mapActions("cart", ["fetchCart"])
+    ...mapActions("cart", ["fetchCart"]),
+
+    // cart
+    ...mapActions('cart', ['fetchCart']),
+
+
+    // add to cart
+    ...mapActions('product', ['addToCart']),
+
+    async addToCart(productId) {
+        try {
+            await this.$store.dispatch('product/addToCart', productId);
+            this.fetchCart();
+        } catch (error) {
+            console.error(error);
+        }
+    },
     
+    tambah() {
+        this.cek++
+    },
+    kurang() {
+        if (this.cek > 1) {
+            this.cek--
+        }
+    }
 },
+
 beforeMount(){
   this.fetchProduct()
   this.fetchCart()
 },
+
 mounted(){
   const productSlug = this.$route.params.slug;
+  console.log("ProductSlug:", productSlug);
   this.fetchSingleProduct(productSlug);
 
   const cektoken = localStorage.getItem('token');
