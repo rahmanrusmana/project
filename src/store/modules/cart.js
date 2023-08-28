@@ -6,7 +6,8 @@ const cart = {
       cart: [],
     },
     getters:{
-       getCart: (state) => state.cart
+       getCart: (state) => state.cart,
+       getCheckout: (state) => state.dataCheckout,
     },
     actions:{
         async fetchCart({commit}) {
@@ -71,14 +72,54 @@ const cart = {
                 alert("Error");
                 console.log(error)
             }
-        }
+        },
+
+        async checkoutCart(
+            { commit, dispatch },
+            {
+              shippingAddress,
+              billingAddress,
+              paymentType,
+              deliveryType,
+              cart_item_ids,
+            }
+          ) {
+            try {
+              const response = await axios.post(
+                `https://ecommerce.olipiskandar.com/api/v1/checkout/order/store`,
+                {
+                  shipping_address_id: shippingAddress,
+                  billing_address_id: billingAddress,
+                  payment_type: paymentType,
+                  delivery_type: deliveryType,
+                  cart_item_ids: cart_item_ids,
+                  transactionId: null,
+                  receipt: null,
+                },
+                {
+                  headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                  },
+                }
+              );
+              dispatch("fetchCart");
+              console.log(response.data.message);
+              commit('SET_CHECKOUT', response.data);
+            } catch (error) {
+              alert("Error");
+              console.log(error);
+            }
+          },
        
         
     },
     mutations:{
         SET_CART(state, cart) {
             state.cart = cart
-        }
+        },
+        SET_CHECKOUT(state, checkout) {
+            state.dataCheckout = checkout;
+        },
     }
 }
 

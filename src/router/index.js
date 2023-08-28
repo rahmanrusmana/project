@@ -11,6 +11,7 @@ import Brand from "../views/Brand.vue"
 import Kategori from "../views/Kategori.vue"
 import SingleProduct from "../views/SingleProduct.vue"
 import Profile from "../views/Profile.vue"
+import OrderPage from "../views/OrderPage.vue"
 
 const routes = [
     {
@@ -48,7 +49,8 @@ const routes = [
     {
         path: "/checkout",
         name: "Checkout",
-        component: Checkout
+        component: () => import("../views/Checkout.vue"),
+        meta: { requiresLogin: false },
     },
     {
         path: "/contact",
@@ -76,6 +78,11 @@ const routes = [
         name: "Profile",
         component: Profile,
         beforeEnter: cekToken,
+    },
+    {
+        path:"/orderpage",
+        name: "OrderPage",
+        component: OrderPage,
     }
 ];
 

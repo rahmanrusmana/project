@@ -4,8 +4,9 @@ import auth from "./modules/auth";
 import brand from "./modules/brand";
 import kategori from "./modules/kategori"
 import product from "./modules/product";
-import user from "./modules/user"
-import cart from "./modules/cart"
+import user from "./modules/user";
+import cart from "./modules/cart";
+import order from "./modules/order";
 
 const store = createStore({
     state: {
@@ -18,7 +19,8 @@ const store = createStore({
         kategori,
         product,
         user,
-        cart
+        cart,
+        order
     }
 })
 export default store;
