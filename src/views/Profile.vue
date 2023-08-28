@@ -1,5 +1,5 @@
-<template class="">
-<div class="h-screen md:flex">
+<template>
+<div class=" md:flex">
     <div class="flex md:w-1/2 justify-center py-10 items-center bg-gray-100">
 		<form class="bg-white">
             <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-900 text-gray-100">
@@ -7,11 +7,42 @@
 	<div className="space-y-4 text-center divide-y divide-gray-700">
 		<div className="my-2 space-y-1">
 			<h2 className="text-xl font-semibold sm:text-2xl">{{ getUser.name}}</h2>
-			<p className="px-5 text-xs sm:text-base text-gray-400">{{ getUser.email }}</p>
 		</div>
+
+		<ul class="mt-3 divide-y rounded bg-gray-800 py-2 px-3 text-white shadow-sm hover:text-gray-100 hover:shadow">
+      <li class="flex items-center py-3 text-sm">
+        <span>Email</span>
+        <span class="ml-auto">{{ getUser.email }}</span>
+      </li>
+      <li class="flex items-center py-3 text-sm">
+        <span>Phone</span>
+        <span class="ml-auto">{{ address.phone }}</span>
+      </li>
+	  <li class="flex items-center py-3 text-sm">
+        <span>Postal Code </span>
+        <span class="ml-auto">{{ address.postal_code }}</span>
+      </li>
+	  <li class="flex items-center py-3 text-sm">
+        <span>Address</span>
+        <span class="ml-auto">{{ address.address }}</span>
+      </li>
+	  <li class="flex items-center py-3 text-sm">
+        <span>City</span>
+        <span class="ml-auto">{{ address.city }}</span>
+      </li>
+	  <li class="flex items-center py-3 text-sm">
+        <span>Country</span>
+        <span class="ml-auto">{{ address.country}}</span>
+      </li>
+	  <li class="flex items-center py-3 text-sm">
+        <span>State</span>
+        <span class="ml-auto">{{ address.state}}</span>
+      </li>
+    </ul>
 		<div className="flex justify-center pt-2 space-x-4 align-center">
 			<a rel="noopener noreferrer" href="#" aria-label="GitHub" className="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
 				<svg class="h-8 w-8 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" /></svg>
+			
 			</a>
 			<a rel="noopener noreferrer" href="#" aria-label="Dribble" className="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
 				<svg class="h-8 w-8 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="3.6" y1="9" x2="20.4" y2="9" />  <line x1="3.6" y1="15" x2="20.4" y2="15" />  <path d="M11.5 3a17 17 0 0 0 0 18" />  <path d="M12.5 3a17 17 0 0 1 0 18" /></svg>
@@ -51,11 +82,17 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
     computed: {
         ... mapGetters('user', ['getUser']),
+		... mapGetters('auth', ['getAddress']),
+        address() {
+          return this.getAddress.data[0]
+        }
     },
     methods: {
         ...mapActions('user', ["fetchUser"]),
+		...mapActions('auth', ["getUserAddress"]),
     },
     created() {
+		this.getUserAddress()
         this.fetchUser();
     },
 }

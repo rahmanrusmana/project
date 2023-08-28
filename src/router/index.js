@@ -45,6 +45,7 @@ const routes = [
         name: "Cart",
         component: Cart,
         meta: { requiresLogin: false },
+        beforeEnter: cekToken,
       },
     {
         path: "/checkout",
@@ -71,7 +72,8 @@ const routes = [
         path: "/product/:slug",
         name: "SingleProduct",
         component: SingleProduct,
-        props: true
+        props: true,
+        beforeEnter: cekToken,
     },
     {
         path: "/profile",
