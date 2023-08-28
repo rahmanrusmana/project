@@ -80,9 +80,10 @@ const routes = [
         beforeEnter: cekToken,
     },
     {
-        path:"/orderpage",
+        path:"/order/:orderCode",
         name: "OrderPage",
         component: OrderPage,
+        props: true,
     }
 ];
 

@@ -185,11 +185,12 @@ export default {
                 deliveryType: this.deliveryType,
                 cart_item_ids: cartItemIds
             };
-            console.log(checkoutPayload)
+            
             // Call the checkout action with the collected IDs and user address
-            await this.$store.dispatch('cart/checkoutCart', checkoutPayload)
-            .then(() => {
-              this.$router.push(`/orderpage/${this.getCheckout.order_code}`);
+            await this.$store
+              .dispatch('cart/checkoutCart', checkoutPayload)
+              .then(() => {
+              this.$router.push(`/order/${this.getCheckout.order_code}`);
             });
         },
 
