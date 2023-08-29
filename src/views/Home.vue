@@ -1,4 +1,3 @@
-
 <template>
   <div class="bg-gray-100">
     <div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);">
@@ -44,7 +43,22 @@
         </div>
       </div>
     </div>
-
+    <div class="grid grid-cols-3 gap-4 m-10">
+      <div style="height:32rem; background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_540,c_limit/d94bfa7e-9357-406a-a124-1940712dfa0b/nike-just-do-it.png);">
+        <div class=" flex items-end justify-left h-full w-full h-full w-full">
+                <a href="/product" class="ml-10 mt-3 relative inline-flex items-center px-12 py-2 overflow-hidden text-lg font-medium text-white border-2 border-white-600 rounded-full hover:text-black group hover:bg-gray-50">
+                  <span class="absolute left-0 block w-full h-0 transition-all bg-white opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                  <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  </span>
+                  <span class="relative">Start Shopping</span>
+                </a>
+        </div>
+        
+      </div>
+      <div style="height:32rem; background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_540,c_limit/dc62b322-5c3f-4508-b21c-950683ed460f/nike-just-do-it.png);"></div>
+      <div style="height:32rem; background-image: url(https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_540,c_limit/58359474-a0de-4329-959c-55d1652d0912/nike-just-do-it.png);"></div>
+    </div>
   </div>
 </template>
 

@@ -43,6 +43,7 @@ const cart = {
                         },
                     }
                 );
+                alert("Produk Berhasil Di Hapus")
                 console.log(response.data.massage);
                 dispatch("fetchCart")
             } catch (error){

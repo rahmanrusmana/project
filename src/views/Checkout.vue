@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mx-auto w-full bg-white">
+  <div class="relative mx-auto w-full bg-gray-100">
 <div class="grid min-h-screen grid-cols-10">
   <div class="col-span-full py-6 px-4 sm:py-12 lg:col-span-6 ">
     <div class="px-4 pt-8">
@@ -8,7 +8,7 @@
   <div class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6" v-for="cart in getCart" :key="cart.cart_id">
 
     <div class="flex flex-col rounded-lg bg-white sm:flex-row">
-      <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+      <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fb9c1fae-d0e0-4ca2-8210-2135df98bba2/alphafly-2-road-racing-shoes-DcWrKF.png" alt="" />
       <div class="flex w-full flex-col px-4 py-4">
         <span class="font-semibold">{{ cart.name }}</span>
         <span class="float-right text-gray-400">Jumlah {{ cart.qty }}</span>
@@ -18,44 +18,51 @@
   </div>
   
   <!-- =================================================== -->
-<p class="mt-8 text-lg font-medium">Delivery Option</p>
-<form class="mt-5 grid gap-6">
-    <div class="relative">
-        <input class="peer hidden" id="radio_1" type="radio" value="standard" v-model="deliveryType" />
-        <span
-            class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-        <label
-            class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
-            for="radio_1">
-            <img class="w-14 object-contain" src="https://componentland.com/images/naorrAeygcJzX0SyNI4Y0.png"
-                alt="" />
-            <div class="ml-5">
-                <span class="mt-2 font-semibold">Fedex Delivery - Standard</span>
-                <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
+  <p class="mt-8 text-lg font-medium">Delivery Option</p>
+      <form class="mt-3 grid gap-6">
+        <div class="flex flex-row m3">
+          <div class="basis-1/2 m-1">
+            <div class="relative">
+              <input class="peer hidden" id="radio_2" type="radio" name="radio" value="express" v-model="deliveryType"
+                checked />
+              <span
+                class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+              <label
+                class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                for="radio_2">
+                <div class="ml-5">
+                  <span class="mt-2 font-semibold">Express</span>
+                  <p class="text-slate-500 text-sm leading-6">Delivery: 1-2 Days</p>
+                </div>
+              </label>
             </div>
-        </label>
-    </div>
-    <div class="relative">
-        <input class="peer hidden" id="radio_2" type="radio" value="express" v-model="deliveryType" />
-        <span
-            class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-        <label
-            class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
-            for="radio_2">
-            <img class="w-14 object-contain" src="https://componentland.com/images/naorrAeygcJzX0SyNI4Y0.png"
-                alt="" />
-            <div class="ml-5">
-                <span class="mt-2 font-semibold">Fedex Delivery - Express</span>
-                <p class="text-slate-500 text-sm leading-6">Delivery: 1-2 Days</p>
+          </div>
+          <div class="basis-1/2 m-1">
+            <div class="relative">
+              <div class="relative">
+                <input class="peer hidden" id="radio_1" type="radio" value="standard" v-model="deliveryType" />
+                <span
+                  class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+                <label
+                  class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                  for="radio_1">
+                  <div class="ml-5">
+                    <span class="mt-2 font-semibold"> Standard</span>
+                    <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
+                  </div>
+                </label>
+              </div>
             </div>
-        </label>
-    </div>
-</form>
+          </div>
+        </div>
+      </form>
+
+
 
 <!-- ========================================================= -->
 <p class="mt-8 text-lg font-medium">Shipping Methods</p>
 <form class="mt-5 grid gap-6">
-    <div class="relative">
+    <div class="relative bg-white">
         <input class="peer hidden" id="radio_3" type="radio" value="cash_on_delivery" v-model="paymentType" />
         <span
             class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
@@ -71,22 +78,7 @@
             </div>
         </label>
     </div>
-    <div class="relative">
-        <input class="peer hidden" id="radio_4" type="radio" value="cash_on_delivery" v-model="deliveryType" />
-        <span
-            class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-        <label
-            class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
-            for="radio_4">
-            <img class="w-14 object-contain"
-                src="https://png.pngtree.com/png-clipart/20190904/original/pngtree-orange-wallet-icon-png-image_4462385.jpg"
-                alt="" />
-            <div class="ml-5 mt-4">
-                <span class="mt-16 font-semibold leading-6">Payment Wallet</span>
-                <!-- <p class="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p> -->
-            </div>
-        </label>
-    </div>
+    
 </form>
   
   
@@ -130,11 +122,11 @@
       <div class="my-5 h-0.5 w-full bg-white bg-opacity-30"></div>
       <div class="space-y-2">
         <p class="flex justify-between text-lg font-bold text-white"><span>Subtotal :</span><span>{{ totalHarga() }}</span></p>
-        <p class="flex justify-between text-sm font-medium text-white"><span>Shiping :</span><span>Rp 55.000</span></p>
+        <p class="flex justify-between text-sm font-medium text-white"><span>Shiping :</span><span>Rp {{ ongkir }}</span></p>
       </div>
 
       <div class="my-5 h-0.5 w-full bg-white bg-opacity-30"></div>
-      <p class="flex justify-between text-lg font-bold text-white"><span>Total :</span><span>{{ totalHarga() }}</span></p>
+      <p class="flex justify-between text-lg font-bold text-white"><span>Total :</span><span>{{ parseInt(totalHarga()) + parseInt(ongkir) }}</span></p>
       
       <button @click="performCheckout" type="submit" class="mt-2 inline-flex w-full items-center justify-center rounded bg-gray-900 py-2.5 px-4 text-base font-semibold tracking-wide text-white text-opacity-80 outline-none ring-offset-2 transition hover:text-opacity-100 focus:ring-2 focus:ring-teal-500 sm:text-lg">Place Order</button>
     </div>
@@ -153,6 +145,7 @@ export default {
     return {
             paymentType: '',
             deliveryType: '',
+            ongkir: 50000,
         };
   },
     computed: {

@@ -23,11 +23,6 @@
             <input type="email" class="block w-full cursor-text appearance-none  border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-black-500 focus:bg-white focus:text-gray-600 focus:shadow" id="email" name="email-username" placeholder="Email address" autofocus="" v-model="email" required />
           </div>
           <div class="mb-4">
-            <div class="flex justify-between">
-              <a href="auth-forgot-password-basic.html" class="cursor-pointer text-black-500 no-underline hover:text-black-500">
-                <small class=" ">Forgot The Password?</small>
-              </a>
-            </div>
             <div class="relative flex w-full flex-wrap items-stretch">
               <input type="password" id="password" class="relative block flex-auto cursor-text appearance-none border border-gray-400 bg--100 py-2 px-3 text-sm outline-none focus:border-blue-500 focus:bg-white focus:text-gray-600 focus:shadow" name="password" placeholder="Password" v-model="password" required/>
             </div>

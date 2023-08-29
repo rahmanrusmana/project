@@ -1,5 +1,5 @@
-<template>
-  <h1 class="mb-8 text-center font-sans text-5xl font-bold mt-5">Produck</h1>
+<template >
+  <h1 class="mb-8 text-center font-sans text-5xl font-bold mt-5 tracking-tight">PRODUCT</h1>
         <div class="grid grid-cols-4 gap-4 m-5">
             <div class="" v-for="product in getProduct.slice(0, 12)" :key="product.slug">
                 <!-- component -->

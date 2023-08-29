@@ -1,5 +1,18 @@
 <template>
 <div class=" md:flex">
+	<div
+		class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-black to-gray-900 i justify-around items-center hidden">
+        <div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg);">
+            <div class="flex justify-rigt h-full w-full">
+            </div>
+        </div>
+        
+		<div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+		<div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
+	</div>
+
     <div class="flex md:w-1/2 justify-center py-10 items-center bg-gray-100">
 		<form class="bg-white">
             <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 bg-gray-900 text-gray-100">
@@ -60,19 +73,9 @@
 </div> 
         </form>
 	</div>
-	<div
-		class="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-black to-gray-900 i justify-around items-center hidden">
-        <div class="w-full bg-cover bg-center" style="height:32rem; background-image: url(https://app.svgator.com/assets/svgator.webapp/log-in-girl.svg);">
-            <div class="flex justify-rigt h-full w-full">
-                <p class="text-white text-2xl font-extrabold uppercase md:text-3xl ml-10 mt-14">Your Profile</p>
-            </div>
-        </div>
-        
-		<div class="absolute -bottom-32 -left-40 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-		<div class="absolute -bottom-40 -left-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-		<div class="absolute -top-40 -right-0 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-		<div class="absolute -top-20 -right-20 w-80 h-80 border-4 rounded-full border-opacity-30 border-t-8"></div>
-	</div>
+
+	
+	
 	
 </div>
 </template>

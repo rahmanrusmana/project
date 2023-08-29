@@ -1,7 +1,7 @@
 <template>
-    <h1 class="mb-8 text-center font-sans text-5xl font-bold mt-5">Kategori</h1>
+    <h1 class="mb-8 text-center font-sans text-5xl font-bold mt-5 tracking-tight">KATEGORI</h1>
         <div class="grid grid-cols-4 gap-4">
-            <div class=" flex flex-container" v-for="kategori in getKategori.data">
+            <div class=" flex flex-container" v-for="kategori in getKategori.data.slice(0, 12)">
                 <div className="card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                         <img :src="kategori.banner" className="rounded-xl" />
