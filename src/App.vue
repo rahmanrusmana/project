@@ -1,12 +1,12 @@
 <template>
     <Navbar/>
     <router-view />
-    <Foter/>
+    <Foter></Foter>
 </template>
 
 <script>
-import Foter from "/src/components/foter.vue";
-import Navbar from "../src/components/Navbar.vue"
+import Navbar from "./components/Navbar.vue"
+import Foter from "./components/Foter.vue";
 
 
 export default {
